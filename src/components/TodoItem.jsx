@@ -10,8 +10,18 @@ function TodoItem({ todo }) {
         <div className="col">
           <h4>{todo.name}</h4>
         </div>
-        <button className="btn btn-primary m-2">Edit</button>
-        <button className="btn btn-danger m-2">Delete</button>
+        <button
+          onClick={() => dispatch(deleteTodo(todo.id))}
+          className="btn btn-primary m-2"
+        >
+          Edit
+        </button>
+        <button
+          onClick={() => dispatch(deleteTodo(todo.id))}
+          className="btn btn-danger m-2"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
